@@ -14,8 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/front', function () {
-    return view('tabs.results');
+Route::group(['prefix' => 'tabs'],function (){
+    Route::get('/results',['as'=>'results','use'=>'Front\Main@index']);
+    Route::get('/favourites',['as'=>'favourites','use'=>'Front\Main@index']);
+    Route::get('/comparison',['as'=>'comparison','use'=>'Front\Main@index']);
 });
 Route::prefix('/pars')->group(function () {
     Route::get('', 'Parser@get_news');
