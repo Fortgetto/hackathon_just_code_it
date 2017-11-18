@@ -21,3 +21,7 @@ Route::prefix('/pars')->group(function () {
     Route::get('', 'Parser@get_news');
     //Route::get('', 'Parser@test');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
