@@ -3958,5 +3958,395 @@
             "testing",
             "xunit"
         ]
+    },
+    {
+        "name": "creativeorange/gravatar",
+        "version": "1.0.10",
+        "version_normalized": "1.0.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/creativeorange/gravatar.git",
+            "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
+            "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.*",
+            "php": ">=5.4.0"
+        },
+        "time": "2017-02-15T22:07:40+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Creativeorange\\Gravatar\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jaco Tijssen",
+                "email": "jaco@creativeorange.nl",
+                "homepage": "https://www.creativeorange.nl",
+                "role": "Developer"
+            }
+        ],
+        "description": "A Laravel 5.0, 5.1, 5.2 and 5.3 gravatar package for retrieving gravatar image URLs or checking the existance of an image.",
+        "keywords": [
+            "avatar",
+            "gravatar",
+            "laravel"
+        ]
+    },
+    {
+        "name": "jenssegers/date",
+        "version": "v3.2.12",
+        "version_normalized": "3.2.12.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jenssegers/date.git",
+            "reference": "1db4d580d1d45085a48fd4a332697619b9a3851c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jenssegers/date/zipball/1db4d580d1d45085a48fd4a332697619b9a3851c",
+            "reference": "1db4d580d1d45085a48fd4a332697619b9a3851c",
+            "shasum": ""
+        },
+        "require": {
+            "nesbot/carbon": "^1.0",
+            "php": ">=5.4",
+            "symfony/translation": "^2.7|^3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0|^5.0|^6.0",
+            "satooshi/php-coveralls": "^1.0"
+        },
+        "time": "2017-06-30T11:51:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Jenssegers\\Date\\DateServiceProvider"
+                ],
+                "aliases": {
+                    "Date": "Jenssegers\\Date\\Date"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Jenssegers\\Date\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jens Segers",
+                "homepage": "https://jenssegers.com"
+            }
+        ],
+        "description": "A date library to help you work with dates in different languages",
+        "homepage": "https://github.com/jenssegers/date",
+        "keywords": [
+            "carbon",
+            "date",
+            "datetime",
+            "i18n",
+            "laravel",
+            "time",
+            "translation"
+        ]
+    },
+    {
+        "name": "prologue/alerts",
+        "version": "0.4.1",
+        "version_normalized": "0.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/prologuephp/alerts.git",
+            "reference": "2a7184a9f39ab6f6dde85dbe0b9c783241bf52ea"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/prologuephp/alerts/zipball/2a7184a9f39ab6f6dde85dbe0b9c783241bf52ea",
+            "reference": "2a7184a9f39ab6f6dde85dbe0b9c783241bf52ea",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/config": "~5",
+            "illuminate/session": "~5",
+            "illuminate/support": "~5",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~4.1"
+        },
+        "time": "2017-01-24T13:22:25+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Prologue\\Alerts\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dries Vints",
+                "email": "dries.vints@gmail.com",
+                "homepage": "http://driesvints.com",
+                "role": "Maintainer"
+            }
+        ],
+        "description": "Prologue Alerts is a package that handles global site messages.",
+        "keywords": [
+            "alerts",
+            "laravel",
+            "messages"
+        ]
+    },
+    {
+        "name": "almasaeed2010/adminlte",
+        "version": "v2.3.11",
+        "version_normalized": "2.3.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/almasaeed2010/AdminLTE.git",
+            "reference": "2be703222af2edcb87e562d3da2299e4352bff8a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/2be703222af2edcb87e562d3da2299e4352bff8a",
+            "reference": "2be703222af2edcb87e562d3da2299e4352bff8a",
+            "shasum": ""
+        },
+        "time": "2017-01-08T21:03:57+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Abdullah Almsaeed",
+                "email": "abdullah@almsaeedstudio.com"
+            }
+        ],
+        "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
+        "homepage": "http://almsaeedstudio.com/",
+        "keywords": [
+            "JS",
+            "admin",
+            "back-end",
+            "css",
+            "less",
+            "responsive",
+            "template",
+            "theme",
+            "web"
+        ]
+    },
+    {
+        "name": "backpack/base",
+        "version": "0.8.2",
+        "version_normalized": "0.8.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Laravel-Backpack/Base.git",
+            "reference": "a47899310e7ad3490b50d9cd7d64d1bdc88dbf08"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/a47899310e7ad3490b50d9cd7d64d1bdc88dbf08",
+            "reference": "a47899310e7ad3490b50d9cd7d64d1bdc88dbf08",
+            "shasum": ""
+        },
+        "require": {
+            "almasaeed2010/adminlte": "2.3.*",
+            "creativeorange/gravatar": "~1.0",
+            "jenssegers/date": "^3.2",
+            "laravel/framework": "5.5.*",
+            "prologue/alerts": "^0.4.1"
+        },
+        "require-dev": {
+            "backpack/generators": "^1.1",
+            "laracasts/generators": "^1.1",
+            "phpunit/phpunit": "~6.0",
+            "scrutinizer/ocular": "~1.1",
+            "squizlabs/php_codesniffer": "~2.3"
+        },
+        "time": "2017-11-07T12:17:50+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Backpack\\Base\\BaseServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Backpack\\Base\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cristian Tabacitu",
+                "email": "hello@tabacitu.ro",
+                "homepage": "http://www.tabacitu.ro",
+                "role": "Chief Architect & Developer"
+            }
+        ],
+        "description": "Laravel Backpack's base package, which offers admin authentication and a blank admin panel using AdminLTE",
+        "homepage": "https://github.com/laravel-backpack/base",
+        "keywords": [
+            "backpack",
+            "base"
+        ]
+    },
+    {
+        "name": "backpack/generators",
+        "version": "1.1.11",
+        "version_normalized": "1.1.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Laravel-Backpack/Generators.git",
+            "reference": "e8ca837fcfa8219c543b405f6c810b838130aa73"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Laravel-Backpack/Generators/zipball/e8ca837fcfa8219c543b405f6c810b838130aa73",
+            "reference": "e8ca837fcfa8219c543b405f6c810b838130aa73",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/console": ">=5.1",
+            "illuminate/support": ">=5.1",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*",
+            "scrutinizer/ocular": "~1.1"
+        },
+        "time": "2017-08-30T18:32:34+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Backpack\\Generators\\GeneratorsServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Backpack\\Generators\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cristian Tone",
+                "email": "cristitone@outlook.com",
+                "homepage": "http://updivision.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Generate files for laravel projects",
+        "homepage": "https://github.com/laravel-backpack/generators",
+        "keywords": [
+            "config",
+            "generators",
+            "model",
+            "request",
+            "view"
+        ]
+    },
+    {
+        "name": "laracasts/generators",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
+            "reference": "8d99c3f9891abce5cc84d5d1d4a7c26cf514ab6e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/8d99c3f9891abce5cc84d5d1d4a7c26cf514ab6e",
+            "reference": "8d99c3f9891abce5cc84d5d1d4a7c26cf514ab6e",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpspec/phpspec": "~2.1"
+        },
+        "time": "2017-11-15T07:23:53+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Laracasts\\Generators\\GeneratorsServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Laracasts\\Generators\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeffrey Way",
+                "email": "jeffrey@laracasts.com"
+            }
+        ],
+        "description": "Extend Laravel 5's generators.",
+        "keywords": [
+            "generators",
+            "laravel"
+        ]
     }
 ]
