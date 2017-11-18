@@ -25,5 +25,6 @@ Route::prefix('/pars')->group(function () {
 });
 
 Auth::routes();
-
+Route::get('/test', 'CategoriesController@index');
+Route::get('/test2', 'KeyWordController@index');
 Route::get('/home', 'HomeController@index')->name('home');

@@ -427,7 +427,7 @@ class ComposerStaticInitb09fb47ed204bcda4ee7bc4e127c0a9b
     );
 
     public static $classMap = array (
-        'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
+        'App\\Categories' => __DIR__ . '/../..',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\HasRoles' => __DIR__ . '/../..' . '/app/HasRoles.php',
@@ -447,7 +447,7 @@ class ComposerStaticInitb09fb47ed204bcda4ee7bc4e127c0a9b
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\KeyWord' => __DIR__ . '/../..' . '/app/KeyWord.php',
+        'App\\KeyWord' => __DIR__ . '/../..',
         'App\\Models\\Favs' => __DIR__ . '/../..' . '/app/Models/Favs.php',
         'App\\Models\\News' => __DIR__ . '/../..' . '/app/Models/News.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
