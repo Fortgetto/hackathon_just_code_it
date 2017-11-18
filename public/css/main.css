@@ -10,10 +10,39 @@
     url('fa/font/fontawesome-webfont.ttf') format('truetype');
 }
 
+.head-wpr{
+    background-color: #218eca;
+}
+.head-wpr > .head-tab-menu{
+    display:flex;
+    padding: 30px 15px 15px 0;
+    justify-content: space-between;
+}
+.head-wpr > .head-tab-menu .tabs-wrp{
+    display: flex;
+    justify-content: space-between;
+
+}
+.tabs-wrp > .nav-tab:not(.active){
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    line-height: 1;
+    background-color: #24bbca;
+    color: white;
+    border-bottom: 1px solid black;
+}
+.tabs-wrp > .nav-tab.active{
+    border-bottom:none;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}
 .main-wrp{
     padding: 15px;
 }
 .ctrl-panel-wrp{
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }

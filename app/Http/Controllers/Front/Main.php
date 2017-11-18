@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;;
 use App\Models\News;
 use App\User;
+use Carbon\Carbon;
+use App\Models\Favs;
 
 class Main extends Controller
 {
     public function index(Request $request){
+
         $this->data['url'] = 'youtube.com';
         $this->data['raiting'] = '125';
 //        $this->data['date'] = '22.11.2018';
