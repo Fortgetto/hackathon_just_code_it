@@ -1,8 +1,8 @@
 const results = new Vue({
-    el:'#results',
+    el:'#result',
     data:{
-        articles:articles,
-        favs:favourites,
+        results:articles.data,
+        // favs:favourites,
     },
     methods:{
         pop_panel:function () {
