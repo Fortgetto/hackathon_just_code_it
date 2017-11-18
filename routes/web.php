@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('/front', function () {
     return view('tabs.results');
 });
+Route::prefix('/pars')->group(function () {
+    Route::get('', 'Parser@get_news');
+    //Route::get('', 'Parser@test');
+});
