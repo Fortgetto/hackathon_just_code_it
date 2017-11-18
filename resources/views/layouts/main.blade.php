@@ -29,7 +29,7 @@
 </div>
     @yield('body')
 </body>
-@if(Route::currentName == 'result')
+@if(Route::currentRouteName() == 'result')
     <script src="{{asset('js/vue/vue.js')}}"></script>
     <script>
         var favs = {{$articles}};
