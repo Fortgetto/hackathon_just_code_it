@@ -15,6 +15,7 @@
 </body>
 @if(Route::currentName == 'result')
     <script src="{{asset('js/vue/vue.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
     @yield('after_scripts')
     @endif
 </html>
