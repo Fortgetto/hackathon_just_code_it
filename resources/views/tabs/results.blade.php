@@ -27,7 +27,7 @@
             <div title="дата">@{{ art.date }}</div>
             <div title="raiting">@{{ art.raiting }}</div>
             <div title="key-words"><span v-for="(itm,$k,i) in art.keywords" v-if="i < 5">@{{ itm }}</span></div>
-            <div title="result-date">@{{ art.descritption }}</div>
+            <div title="result-date">@{{ art.description }}</div>
             <div title="result-date">@{{ art.link }}</div>
             <div class="fa fa-chevron-down"></div>
             <div class="fa fa-exchange" title="сравнить"></div>
