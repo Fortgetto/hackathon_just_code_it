@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fa/font/fontawesome-webfont.eot');
+    src: local('FontAwesome'),
+    local('MaterialIcons-Regular'),
+    url('fa/font/fontawesome-webfont.woff2') format('woff2'),
+    url('fa/font/fontawesome-webfont.woff') format('woff'),
+    url('fa/font/fontawesome-webfont.ttf') format('truetype');
+}
+
+.main-wrp{
+    padding: 15px;
+}
+.ctrl-panel-wrp{
+    display: flex;
+    align-items: center;
+}
