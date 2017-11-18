@@ -23,6 +23,8 @@ class Main extends Controller
             $this->data['articles'][$k]['description'] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eaque illum sed voluptatem! Dolore exercitationem reiciendis repellat repellendus unde? Ab amet deleniti explicabo facere laboriosam libero molestiae omnis quam ut.';
             $this->data['articles'][$k]['keywords'] = ['футбол','ставки','чемпионат мира','Бразилия'];
             $this->data['articles'][$k]['date'] = Carbon::now()->format('Y-m-d H:i:s');
+            $this->data['articles'][$k]['raiting'] = '125';
+            $this->data['articles'][$k]['link'] = 'youtube.com';
         }
 //        $this->data['keywords'] = ;
         $this->data['favs'] = Favs::where('user_id',$this->data['user']->id)->pluck('news_id');

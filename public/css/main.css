@@ -9,18 +9,21 @@
     url('fa/font/fontawesome-webfont.woff') format('woff'),
     url('fa/font/fontawesome-webfont.ttf') format('truetype');
 }
-
+body{
+    background-color: white;
+}
 .head-wpr{
     background-color: #218eca;
 }
 .head-wpr > .head-tab-menu{
     display:flex;
-    padding: 30px 15px 15px 0;
+    padding: 30px 15px 0 15px;
     justify-content: space-between;
 }
 .head-wpr > .head-tab-menu .tabs-wrp{
     display: flex;
-    justify-content: space-between;
+    width: 50%;
+    justify-content: flex-start;
 
 }
 .tabs-wrp > .nav-tab:not(.active){
@@ -30,7 +33,14 @@
     line-height: 1;
     background-color: #24bbca;
     color: white;
-    border-bottom: 1px solid black;
+}
+.tabs-wrp > .nav-tab{
+    padding: 20px;
+    font-size: 20px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 5px;
+
 }
 .tabs-wrp > .nav-tab.active{
     border-bottom:none;
@@ -41,8 +51,61 @@
 .main-wrp{
     padding: 15px;
 }
+.main-wrp a,.main-wrp a:hover{
+    text-decoration: none;
+}
 .ctrl-panel-wrp{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.ctrl-panel-wrp > .ctrl-left,.ctrl-panel-wrp > .ctrl-right{
+    min-width: 20%;
+    max-width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a.ctrl-buttons{
+    color: #8f8f8f;
+    font-size: 26px;
+}
+.ctrl-buttons:hover{
+    color: #5c5c5c;
+}
+.ctrl-buttons > .fa{
+    margin-left: 4px;
+}
+.pag-wrp .inner-wrp{
+    margin-right: 10px;
+    padding-bottom: 6px;
+}
+.pag-wrp a{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    /*line-height: 1.42857143;*/
+    text-decoration: none;
+    color: #337ab7;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+.pag-wrp .pagination{
+    line-height: 1;
+}
+.pag-wrp > a:hover{
+    z-index: 3;
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+.ctrl-left > a{
+    width: 140px;
+}
+.ctrl-left > a.fa-cog,.ctrl-left > a.fa-reorder{
+    width: 100px;
+    text-align: center;
 }

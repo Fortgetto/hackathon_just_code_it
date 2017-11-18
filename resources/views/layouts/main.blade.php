@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{asset('css/fa/font-awesome.min.css')}}">
+    <script src="{{asset('js/vue/vue.js')}}"></script>
     <title>Titile</title>
 </head>
 <body>
 <div class="head-wpr">
     <div class="head-tab-menu">
         <div class="tabs-wrp">
-            <a href="{{(Route::currentRouteName() == 'results')?'javascript:void(0)':Url::to('results')}}" class="nav-tab {{(Route::currentRouteName() == 'results')?'active':''}}"></a>
-            <a href="" class="nav-tab {{(Route::currentRouteName() == 'favourites')?'active':''}}"></a>
-            <div class="nav-tab {{(Route::currentRouteName() == 'comparison')?'active':''}}"></div>
+            <a href="{{(Route::currentRouteName() == 'results')?'javascript:void(0)':Url::to('results')}}" class="nav-tab {{(Route::currentRouteName() == 'results')?'active':''}}">РЕЗУЛЬТАТЫ</a>
+            <a href="" class="nav-tab {{(Route::currentRouteName() == 'favourites')?'active':''}}">ИЗБРАННОЕ</a>
+            <div class="nav-tab {{(Route::currentRouteName() == 'comparison')?'active':''}}">СРАВНИТЬ</div>
         </div>
         <div class="curr-user">
             <a href="{{--{{route('logout')}}--}}" class="curr-user">
@@ -29,15 +30,12 @@
 </div>
     @yield('body')
 </body>
-@if(Route::currentRouteName() == 'result')
-    <script src="{{asset('js/vue/vue.js')}}"></script>
-    <script>
-        var favs = {{$articles}};
-        {{--var date = {{$date}};--}}
-        {{--var raiting = {{$raiting}};--}}
-        {{--var keywords = {{json_encode($keywods)}};--}}
-    </script>
-    <script src="{{asset('js/main.js')}}"></script>
-    @yield('after_scripts')
+@yield('before_scripts')
+<script>
+    var articles = {!!$articles!!};
+</script>
+@yield('after_scripts')
+@if(Route::currentRouteName() == 'results')
+
     @endif
 </html>
