@@ -117,3 +117,24 @@ a.ctrl-buttons{
 .result-wrp .section{
     padding: 0 10px;
 }
+.section.desc{
+    /*font-family: Poppins;*/
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    text-align: left;
+    color: #444a59;
+    float: left;
+    /*width: 64px;*/
+    height: 36px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+}
+.section.soc-btn{
+    min-width: 20%;
+}

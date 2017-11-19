@@ -31,12 +31,12 @@
     </div>
     <div class="main-table-wrp">
         <div class="result-wrp" v-for="(art,ind) in results">
-            <div class="section date" >@{{ art.rim }}</div>
-            <div class="section rait" >@{{ art.raiting }}</div>
+            <div class="section date" >@{{ art.time }}</div>
+            <div class="section rait" >@{{ art.rait }}</div>
             <div class="section key-words"> <span v-for="(itm,$k) in art.keywords" v-if="$k < 5">@{{ itm }}</span></div>
-            <div class="section desc" title="result-date">@{{ art.description }}</div>
+            <div class="section desc" title="result-date">@{{ art.text }}</div>
             <div class="section link" title="result-date">@{{ art.link }}</div>
-            <div class="section">
+            <div class="section soc-btn">
                 <div class="fa fa-chevron-down"></div>
                 <div class="fa fa-exchange" title="сравнить"></div>
                 <div class="fa fa-remove"></div>
@@ -45,37 +45,8 @@
         </div>
     </div>
 </div>
-<div>
-
-    <div class="container">
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Booooooooooom</button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Heaader</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Booooooooooooom modal</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-</div>
 <script>
-    var articles = {!!$articles->toJson()!!};
+    var articles = {!!json_encode($list)!!};
     var favourites = {!!$favs->toJson()!!};
 
 </script>

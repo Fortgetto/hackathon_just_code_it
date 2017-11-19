@@ -19,7 +19,7 @@ class Main extends Controller
         $this->data['raiting'] = '125';
 //        $this->data['date'] = '22.11.2018';
         $this->data['user'] = User::where('id',1)->first();
-        $this->data['paginator'] = News::paginate(1);
+        $this->data['paginator'] = News::paginate($this->data['user']->on_page);
         $this->data['articles'] = $this->data['paginator'];
         foreach ($this->data['articles'] as $k => $v){
             $this->data['articles'][$k]['description'] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eaque illum sed voluptatem! Dolore exercitationem reiciendis repellat repellendus unde? Ab amet deleniti explicabo facere laboriosam libero molestiae omnis quam ut.';
@@ -31,7 +31,7 @@ class Main extends Controller
         $this->data['favs'] = Favs::where('user_id',$this->data['user']->id)->pluck('news_id');
 
         $keys_words = KeyWord::get()->toArray();
-        $text = News::get()->take(5)->toArray();
+        $text = News::limit(5)->get()->keyBy('id')->toArray();
 
         foreach ($text as $key=>$value)
         {
@@ -42,7 +42,9 @@ class Main extends Controller
                     $rate += (int)$keys['width'];
                 }
             $text[$key]['rate'] = $rate;
-            News::insert(['rate' => $rate])->where('id',$keys['id']);
+//            $text[$key]['time'] = Carbon::createFromFormat('H:i, d F Y');
+            if($rate>0)
+            News::insert(['rate' => (int)$rate])->where('id',$keys['id']);
         }
         $this->data['list'] = $text;
         //var_dump($text);

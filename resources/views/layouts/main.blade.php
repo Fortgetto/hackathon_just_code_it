@@ -23,15 +23,39 @@
             <div class="nav-tab {{(Route::currentRouteName() == 'comparison')?'active':''}}">СРАВНИТЬ</div>
         </div>
         <div class="curr-user">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Booooooooooom</button>
             <a href="{{--{{route('logout')}}--}}" class="curr-user">
                 <i class="fa fa-cog"></i>
-                <span class="u-name">{{--{{$user->name}}--}}</span>
+                <span class="u-name">{{$user->name}}</span>
                 <span class="glyphicon glyphicon-remove"></span>
             </a>
         </div>
     </div>
 </div>
     @yield('body')
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Heaader</h4>
+            </div>
+            <div class="modal-body">
+                <p>parameters</p>
+            </div>
+            <div>
+                <input type="text" placeholder="Word"><br />
+                <input type="text" placeholder="Weight word"><br />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 </body>
 @yield('before_scripts')
 <script>

@@ -1,7 +1,7 @@
 const results = new Vue({
     el:'#result',
     data:{
-        results:articles.data,
+        results:articles,
         favs:favourites,
         table_opts:{
             data:1,
