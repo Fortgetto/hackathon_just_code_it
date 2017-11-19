@@ -3,8 +3,8 @@
 <div id="result" class="main-wrp">
     <div class="ctrl-panel-wrp">
         <div class="ctrl-left">
-            <a href="javascript:void(0)" class="ctrl-buttons date" @click="sort()">Дата <i class="fa fa-arrow-circle-o-down"></i></a>
-            <a href="javascript:void(0)" class="ctrl-buttons rait" @click="sort()">Рейтинг<i class="fa fa-arrow-circle-o-up"></i></a>
+            <a href="javascript:location.href = '/?sortingDate'" class="ctrl-buttons date" @click="sort()">Дата <i class="fa fa-arrow-circle-o-down"></i></a>
+            <a href="javascript:location.href = '/?sortingRate'" class="ctrl-buttons rait" @click="sort()">Рейтинг<i class="fa fa-arrow-circle-o-up"></i></a>
             <a href="javascript:void(0)" @click="pop_panel()" class="ctrl-buttons opts fa fa-cog" title="настройки"></a>
             <a href="javascript:void(0)" @click="table_opts()" class="ctrl-buttons date fa fa-reorder" title="настройки таблицы"></a>
             <div class="drop-opt" v-if="table_opts == true">
@@ -31,7 +31,7 @@
     </div>
     <div class="main-table-wrp">
         <div class="result-wrp" v-for="(art,ind) in results">
-            <div class="section date" >@{{ art.date }}</div>
+            <div class="section date" >@{{ art.rim }}</div>
             <div class="section rait" >@{{ art.raiting }}</div>
             <div class="section key-words"> <span v-for="(itm,$k) in art.keywords" v-if="$k < 5">@{{ itm }}</span></div>
             <div class="section desc" title="result-date">@{{ art.description }}</div>
