@@ -13,6 +13,8 @@ use App\Models\Favs;
 
 class Main extends Controller
 {
+    public $Rate = 0;
+
     public function index(Request $request){
 
         $this->data['url'] = 'youtube.com';
@@ -35,16 +37,17 @@ class Main extends Controller
 
         foreach ($text as $key=>$value)
         {
-            $rate = 0;
+            $this->Rate = 0;
             foreach ($keys_words as $keys)
-                if(strpos($value['text'],$keys['name']) === true)
+                if(strpos($value['text'], $keys['name']) !== false)
+                //if(strrpos($value['text'],$keys['name']) != -1)
                 {
-                    $rate += (int)$keys['width'];
+                    $this->Rate = $this->Rate + (int)$keys['width'];
                 }
-            $text[$key]['rate'] = $rate;
+            $text[$key]['rate'] = (int)$this->Rate;
 //            $text[$key]['time'] = Carbon::createFromFormat('H:i, d F Y');
             News::where('id', $keys['id'])
-            ->update(['rate' => (int)$rate]);
+            ->update(['rate' => (int)$this->Rate]);
         }
         $this->data['list'] = $text;
         //var_dump($text);
