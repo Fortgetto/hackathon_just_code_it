@@ -28,30 +28,30 @@ class Main extends Controller
             $this->data['articles'][$k]['raiting'] = '125';
             $this->data['articles'][$k]['link'] = 'youtube.com';
         }
-//        $this->data['keywords'] = ;
         $this->data['favs'] = Favs::where('user_id',$this->data['user']->id)->pluck('news_id');
-//        $this->data['description'] = ;
-//        dd($this->data);
+
+        $keys_words = KeyWord::get()->toArray();
+        $text = News::get()->take(5)->toArray();
+
+        foreach ($text as $key=>$value)
+        {
+            $rate = 0;
+            foreach ($keys_words as $keys)
+                if(strpos($value['text'],$keys['name']) === true)
+                {
+                    $rate += (int)$keys['width'];
+                }
+            $text[$key]['rate'] = $rate;
+            News::insert(['rate' => $rate])->where('id',$keys['id']);
+        }
+        $this->data['list'] = $text;
+        //var_dump($text);
+        //exit;
         return view('tabs.'.$request->route()->getName(), $this->data);
     }
     public function calculation()
     {
-        $keys_words = KeyWord::get()->toArray();
-        $text = News::get()->toArray();
-        //var_dump($keys_words);
-        //var_dump($text);
-        //exit;
-        $rate = 0;
-        foreach ($text as $value)
-        {
-            foreach ($keys_words as $keys)
-                if(strpos($value['text'],$keys['name']) === true)
-                {
-                    /*echo $keys['name']. " ". $value['id'];*/
-                    $rate += $keys['width'];
-                }
-            $text['rate'] = $rate;
 
-        }
+        //return view('result',$data);
     }
 }
