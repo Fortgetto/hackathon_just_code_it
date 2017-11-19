@@ -19,7 +19,7 @@ class Parser extends Controller
                 preg_match('/<time class="g-date">.*?<\/time>/', $out[0][0], $time, PREG_OFFSET_CAPTURE);
                 DB::table('news')->insert(
                     [
-                        'text' => strip_tags($out[0][0]),
+                        'text' => str_replace("&nbsp;", " ", strip_tags($out[0][0])),
                         'link' => $data['value'],
                         'time' => strip_tags($time[0][0]),
                         'rate' => 1
