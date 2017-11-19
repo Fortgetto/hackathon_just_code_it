@@ -43,8 +43,8 @@ class Main extends Controller
                 }
             $text[$key]['rate'] = $rate;
 //            $text[$key]['time'] = Carbon::createFromFormat('H:i, d F Y');
-            if($rate>0)
-            News::insert(['rate' => (int)$rate])->where('id',$keys['id']);
+            News::where('id', $keys['id'])
+            ->update(['rate' => (int)$rate]);
         }
         $this->data['list'] = $text;
         //var_dump($text);
