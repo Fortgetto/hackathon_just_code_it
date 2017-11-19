@@ -16,12 +16,12 @@ class Parser extends Controller
             if ($data['tag'] == 'GUID')
             {
                 preg_match('/<div class="b-topic__header.*<\/div>/', $this->curling($data['value']), $out, PREG_OFFSET_CAPTURE);
-                //preg_match('/<time class="g-date">.*<\/time>/', $out[0][0], $time, PREG_OFFSET_CAPTURE);
-                //var_dump($time);
+                preg_match('/<time class="g-date">.*?<\/time>/', $out[0][0], $time, PREG_OFFSET_CAPTURE);
                 DB::table('news')->insert(
                     [
-                        'text' => $out[0][0],
-                        //'created_at' => time(),
+                        'text' => strip_tags($out[0][0]),
+                        'link' => $data['value'],
+                        'time' => strip_tags($time[0][0])
                     ]
                 );
             }

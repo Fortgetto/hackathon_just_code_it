@@ -427,7 +427,6 @@ class ComposerStaticInitb09fb47ed204bcda4ee7bc4e127c0a9b
     );
 
     public static $classMap = array (
-        'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\HasRoles' => __DIR__ . '/../..' . '/app/HasRoles.php',
@@ -435,11 +434,11 @@ class ComposerStaticInitb09fb47ed204bcda4ee7bc4e127c0a9b
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
-        'App\\Http\\Controllers\\Categories' => __DIR__ . '/../..' . '/app/Http/Controllers/Categories.php',
+        'App\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Front\\Main' => __DIR__ . '/../..' . '/app/Http/Controllers/Front/Main.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\KeyWord' => __DIR__ . '/../..' . '/app/Http/Controllers/KeyWord.php',
+        'App\\Http\\Controllers\\KeyWordController' => __DIR__ . '/../..' . '/app/Http/Controllers/KeyWordController.php',
         'App\\Http\\Controllers\\Parser' => __DIR__ . '/../..' . '/app/Http/Controllers/Parser.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -447,8 +446,9 @@ class ComposerStaticInitb09fb47ed204bcda4ee7bc4e127c0a9b
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\KeyWord' => __DIR__ . '/../..' . '/app/KeyWord.php',
+        'App\\Models\\Categories' => __DIR__ . '/../..' . '/app/Models/Categories.php',
         'App\\Models\\Favs' => __DIR__ . '/../..' . '/app/Models/Favs.php',
+        'App\\Models\\KeyWord' => __DIR__ . '/../..' . '/app/Models/KeyWord.php',
         'App\\Models\\News' => __DIR__ . '/../..' . '/app/Models/News.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

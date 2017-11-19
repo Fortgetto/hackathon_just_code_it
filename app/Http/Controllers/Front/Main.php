@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;;
 use App\Models\News;
+use App\Models\KeyWord;
+use App\Models\Categories;
 use App\User;
 use Carbon\Carbon;
 use App\Models\Favs;
@@ -31,5 +33,25 @@ class Main extends Controller
 //        $this->data['description'] = ;
 //        dd($this->data);
         return view('tabs.'.$request->route()->getName(), $this->data);
+    }
+    public function calculation()
+    {
+        $keys_words = KeyWord::get()->toArray();
+        $text = News::get()->toArray();
+        //var_dump($keys_words);
+        //var_dump($text);
+        //exit;
+        $rate = 0;
+        foreach ($text as $value)
+        {
+            foreach ($keys_words as $keys)
+                if(strpos($value['text'],$keys['name']) === true)
+                {
+                    /*echo $keys['name']. " ". $value['id'];*/
+                    $rate += $keys['width'];
+                }
+            $text['rate'] = $rate;
+
+        }
     }
 }
