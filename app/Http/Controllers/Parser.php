@@ -16,7 +16,7 @@ class Parser extends Controller
             if ($data['tag'] == 'GUID')
             {
                 preg_match('/<div class="b-topic__header.*<\/div>/', $this->curling($data['value']), $out, PREG_OFFSET_CAPTURE);
-                preg_match('/<time class="g-date">.*?<\/time>/', $out[0][0], $time, PREG_OFFSET_CAPTURE);
+                preg_match('/<time class="g-date">.+<\/time>/', $out[0][0], $time, PREG_OFFSET_CAPTURE);
                 DB::table('news')->insert(
                     [
                         'text' => strip_tags($out[0][0]),
