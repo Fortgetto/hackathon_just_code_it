@@ -109,3 +109,11 @@ a.ctrl-buttons{
     width: 100px;
     text-align: center;
 }
+.result-wrp{
+    display: flex;
+    background-color: #DDDDDD;
+    padding: 15px 10px;
+}
+.result-wrp .section{
+    padding: 0 10px;
+}

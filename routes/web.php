@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route::group(['middleware'=>'App\Http\Middleware\AuthUser'], function(){
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', ['as'=>'results','uses'=>'Front\Main@index'])->middleware('auth.basic');
+
 Route::group(['prefix' => 'tabs'],function (){
     Route::get('/results',['as'=>'results','uses'=>'Front\Main@index']);
     Route::get('/favourites',['as'=>'favourites','uses'=>'Front\Main@index']);
@@ -23,7 +25,7 @@ Route::prefix('/pars')->group(function () {
     Route::get('', 'Parser@get_news');
     //Route::get('', 'Parser@test');
 });
-
+//});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
