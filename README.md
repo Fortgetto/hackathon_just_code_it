@@ -24,3 +24,5 @@
  road_map: https://docs.google.com/document/d/1vx6Wfp3DJD_odDZL8IGRgPJE5I1HjcuywZlReWQKaFc
  
  page design: https://drive.google.com/open?id=1iKa39CjO0deJqDHig8YW_SO2wGVF2DW4
+ 
+ https://docs.google.com/presentation/d/1RkK7Ii4kmAZ80QoOBIhMZliaFeDa3bJ0eQN4PYEUFro/
