@@ -50,3 +50,5 @@ class KeyWordController extends Controller
         \DB::table('keywords')->where('name',$_REQUEST['Name'])->delete();
     }
 }
+
+//ByNikitaMorozov

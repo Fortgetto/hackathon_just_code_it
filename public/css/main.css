@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: 'FontAwesome';
     font-style: normal;
@@ -25,6 +27,9 @@ body{
     width: 50%;
     justify-content: flex-start;
 
+}
+.head-wpr > .head-tab-menu a:hover{
+    text-decoration: none;
 }
 .tabs-wrp > .nav-tab:not(.active){
     font-size: 20px;
@@ -81,6 +86,7 @@ a.ctrl-buttons{
     padding-bottom: 6px;
 }
 .pag-wrp a{
+    /*By Nikita Morozov*/
     position: relative;
     float: left;
     padding: 6px 12px;
@@ -113,6 +119,9 @@ a.ctrl-buttons{
     display: flex;
     background-color: #DDDDDD;
     padding: 15px 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
 }
 .result-wrp .section{
     padding: 0 10px;
@@ -125,7 +134,7 @@ a.ctrl-buttons{
     text-align: left;
     color: #444a59;
     float: left;
-    /*width: 64px;*/
+    width: 45%;
     height: 36px;
     word-wrap: break-word;
     text-overflow: ellipsis;
@@ -137,4 +146,26 @@ a.ctrl-buttons{
 }
 .section.soc-btn{
     min-width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.section.date{
+    font-size: 12px;
+    min-width: 12%;
+}
+.section.link{
+    width: 10%;
+    word-wrap: break-word;
+}
+[v-cloak]{
+    display: none;
+}
+.section.soc-btn > .fa{
+    font-size: 28px;
+}
+.section.soc-btn .fa-chevron-down{
+    color: #0d6aad;
+}
+.section.soc-btn .fa-exchange{
+    color: #da1111;
 }
