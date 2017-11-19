@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Route;
 
 class KeyWordController extends Controller
 {
@@ -32,14 +33,17 @@ class KeyWordController extends Controller
     }
     public function add_key_word()
     {
-        if(\DB::table('keywords')->where('name', $_REQUEST['Name'])->value('name') != "")
+        if(\DB::table('keywords')->where('name', $_REQUEST['nameword'])->value('name') != "")
         {
             abort(404, 'Такое ключевое слово уже существует');
         }
         else
             \DB::table('keywords')->insert([
-                'name' => $_REQUEST['Name']
+                'name' => $_REQUEST['nameword'],
+                'width' => (int)$_REQUEST['widthword'],
+                'multiplier' => (int)$_REQUEST['multiword']
             ]);
+        return redirect()->back();
     }
     public function drop_key_word()
     {

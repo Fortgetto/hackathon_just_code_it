@@ -16,14 +16,15 @@ class CategoriesController extends Controller
     }
     public function add_category()
     {
-        if(\DB::table('categories')->where('name', $_REQUEST['Name'])->value('name') != "")
+        if(\DB::table('categories')->where('name', $_REQUEST['namecat'])->value('name') != "")
         {
             abort(404, 'Такая категория существует');
         }
         else
             \DB::table('categories')->insert([
-                'name' => $_REQUEST['Name']
+                'name' => $_REQUEST['namecat']
             ]);
+        return redirect()->back();
     }
     public function remove_category()
     {

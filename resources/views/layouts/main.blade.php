@@ -23,7 +23,12 @@
             <div class="nav-tab {{(Route::currentRouteName() == 'comparison')?'active':''}}">СРАВНИТЬ</div>
         </div>
         <div class="curr-user">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Booooooooooom</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                Ключевые слова
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                Категории
+            </button>
             <a href="{{--{{route('logout')}}--}}" class="curr-user">
                 <i class="fa fa-cog"></i>
                 <span class="u-name">{{$user->name}}</span>
@@ -33,27 +38,61 @@
     </div>
 </div>
     @yield('body')
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
 
-        <!-- Modal content-->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Heaader</h4>
+                <h5 class="modal-title" id="exampleModalLabel">Ключевые слова</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
-                <p>parameters</p>
-            </div>
-            <div>
-                <input type="text" placeholder="Word"><br />
-                <input type="text" placeholder="Weight word"><br />
+                <div class="form-group">
+                    <label for="usr">Название слова:</label>
+                    <input type="text" class="form-control" id="nameword">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Вес слова:</label>
+                    <input type="text" class="form-control" id="widthword">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Множитель слова:</label>
+                    <input type="text" class="form-control" id="multiword">
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-success" onclick="location.href = '/addword/?nameword='+$('#nameword').val()+'&widthword='+$('#widthword').val()+'&multiword='+$('#multiword').val()">Добавить слово</button>
             </div>
         </div>
+    </div>
+</div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Категории</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="usr">Название критерии:</label>
+                    <input type="text" class="form-control" id="namecat">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-success" onclick="location.href = '/addcat/?namecat='+$('#namecat').val()+''">Добавить категорию</button>
+            </div>
+        </div>
     </div>
 </div>
 </body>

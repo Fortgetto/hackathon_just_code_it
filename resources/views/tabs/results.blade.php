@@ -1,5 +1,7 @@
 @extends('layouts.main')
 @section('body')
+
+
 <div id="result" class="main-wrp">
     <div class="ctrl-panel-wrp">
         <div class="ctrl-left">

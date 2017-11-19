@@ -30,4 +30,7 @@ Auth::routes();
 Route::get('/test', 'CategoriesController@index');
 Route::get('/test2', 'KeyWordController@index');
 Route::get('/test3', 'Front\Main@calculation');
+
+Route::get('/addcat', 'CategoriesController@add_category');
+Route::get('/addword', 'KeyWordController@add_key_word');
 Route::get('/home', 'HomeController@index')->name('home');
